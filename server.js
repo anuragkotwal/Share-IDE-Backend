@@ -26,7 +26,7 @@ process.on('uncaughtException', (err) => {
     logger.error(`Unhandled Exception - ${err.message}`, { err: err.stack })
 })
 
-const whitelist = [/http:\/\/localhost:[0-9]{4}/]
+const whitelist = [/http:\/\/localhost:[0-9]{4}/,process.env.FRONTED_URL]
 const corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.some((el) => origin?.match(el)) || origin === undefined) {
