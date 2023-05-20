@@ -1,9 +1,9 @@
 const userServices = require('../../services/user')
 const AWS = require('aws-sdk')
 const S3 = new AWS.S3({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    region: process.env.AWS_REGION,
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID_SHAREIDE,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY_SHAREIDE,
+    region: process.env.AWS_REGION_SHAREIDE,
 })
 const bucket = process.env.BUCKET
 const ACTIONS = require('../../utils/Actions')
